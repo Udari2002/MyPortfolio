@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+    --color-lightHover: #fcf4ff;
+    --color-darkHover: #2a004a;
+    --color-darkTheme: #11001f;
+
+    --font-Outfit: "Outfit", sans-serif;
+    --font-Ovo: "Ovo", serif;
+}
+
+
 *{
-  font-family: Outfit;
+  font-family: var(--font-Outfit);
+  scroll-behavior: smooth;
 }
