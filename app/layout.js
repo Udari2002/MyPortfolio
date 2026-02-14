@@ -1,5 +1,4 @@
 
-import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 
@@ -13,20 +12,16 @@ const ovo = Ovo({
   weight: ["400"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "PORTFOLIO",
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased`}
+        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
       >
         {children}
       </body>
